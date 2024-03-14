@@ -1,0 +1,593 @@
+Program.Sub.ScreenSU.Start
+Gui.Form..Create
+Gui.Form..Size(6630,12825)
+Gui.Form..MinX(6615)
+Gui.Form..MinY(10575)
+Gui.Form..Position(0,0)
+Gui.Form..BackColor(-2147483633)
+Gui.Form..MousePointer(0)
+Gui.Form..Event(UnLoad,Form_UnLoad)
+Gui.Form..Caption("GCG 5536 Maintenance")
+Gui.Form.frmGrid.Create(Frame)
+Gui.Form.frmGrid.Size(6240,8820)
+Gui.Form.frmGrid.Position(75,3360)
+Gui.Form.frmGrid.Anchor(15)
+Gui.Form.GsGcCrossRef.Create(GsGridControl)
+Gui.Form.GsGcCrossRef.Size(6075,8535)
+Gui.Form.GsGcCrossRef.Position(75,180)
+Gui.Form.GsGcCrossRef.Parent("frmGrid")
+Gui.Form.GsGcCrossRef.Anchor(15)
+Gui.Form.frmImport.Create(Frame)
+Gui.Form.frmImport.Size(6240,990)
+Gui.Form.frmImport.Position(75,2295)
+Gui.Form.frmImport.Anchor(13)
+Gui.Form.lbl4.Create(Label,"Import File Location:",True,1935,255,0,60,210,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl4.Parent("frmImport")
+Gui.Form.txtFileLoc.Create(TextBox,"",True,4740,300,0,90,450,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtFileLoc.Parent("frmImport")
+Gui.Form.txtFileLoc.Anchor(13)
+Gui.Form.cmdFileLocBrw.Create(Button)
+Gui.Form.cmdFileLocBrw.Size(375,375)
+Gui.Form.cmdFileLocBrw.Position(4875,420)
+Gui.Form.cmdFileLocBrw.Parent("frmImport")
+Gui.Form.cmdFileLocBrw.Caption("^")
+Gui.Form.cmdFileLocBrw.Event(Click,cmdFileLocBrw_Click)
+Gui.Form.cmdFileLocBrw.Anchor(9)
+Gui.Form.cmdImport.Create(Button)
+Gui.Form.cmdImport.Size(855,375)
+Gui.Form.cmdImport.Position(5310,420)
+Gui.Form.cmdImport.Parent("frmImport")
+Gui.Form.cmdImport.Caption("Import")
+Gui.Form.cmdImport.Event(Click,cmdImport_Click)
+Gui.Form.cmdImport.Anchor(9)
+Gui.Form.cmdSaveChanges.Create(Button)
+Gui.Form.cmdSaveChanges.Size(1665,375)
+Gui.Form.cmdSaveChanges.Position(4650,1845)
+Gui.Form.cmdSaveChanges.Caption("Save Changes")
+Gui.Form.cmdSaveChanges.Event(Click,cmdSaveChanges_Click)
+Gui.Form.cmdSaveChanges.Anchor(9)
+Gui.Form.frmSFTP.Create(Frame)
+Gui.Form.frmSFTP.Size(4485,2130)
+Gui.Form.frmSFTP.Position(75,105)
+Gui.Form.frmSFTP.Caption("SFTP Settings")
+Gui.Form.lbl1.Create(Label,"Remote Host:",True,1110,255,0,75,360,True,1,"Arial",8,-2147483633,0)
+Gui.Form.lbl1.Parent("frmSFTP")
+Gui.Form.lbl2.Create(Label,"User:",True,1110,255,0,75,720,True,1,"Arial",8,-2147483633,0)
+Gui.Form.lbl2.Parent("frmSFTP")
+Gui.Form.lbl3.Create(Label,"Password:",True,1110,255,0,75,1065,True,1,"Arial",8,-2147483633,0)
+Gui.Form.lbl3.Parent("frmSFTP")
+Gui.Form.lbl5.Create(Label,"Remote Port:",True,1110,255,0,75,1425,True,1,"Arial",8,-2147483633,0)
+Gui.Form.lbl5.Parent("frmSFTP")
+Gui.Form.lbl6.Create(Label,"Remote Path:",True,1110,255,0,75,1785,True,1,"Arial",8,-2147483633,0)
+Gui.Form.lbl6.Parent("frmSFTP")
+Gui.Form.txtRemoteHost.Create(TextBox,"",True,3180,300,0,1230,270,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtRemoteHost.Parent("frmSFTP")
+Gui.Form.txtUser.Create(TextBox,"",True,3180,300,0,1230,630,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtUser.Parent("frmSFTP")
+Gui.Form.txtPassword.Create(TextBox,"",True,3180,300,0,1230,990,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtPassword.Parent("frmSFTP")
+Gui.Form.txtPassword.PasswordChar("*")
+Gui.Form.txtRemotePort.Create(TextBox,"",True,3180,300,0,1230,1320,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtRemotePort.Parent("frmSFTP")
+Gui.Form.txtRemotePath.Create(TextBox,"",True,3180,300,0,1230,1650,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtRemotePath.Parent("frmSFTP")
+Gui.Form.cmdSaveSettings.Create(Button)
+Gui.Form.cmdSaveSettings.Size(1665,375)
+Gui.Form.cmdSaveSettings.Position(4665,300)
+Gui.Form.cmdSaveSettings.Anchor(9)
+Gui.Form.cmdSaveSettings.Caption("Save Settings")
+Gui.Form.cmdSaveSettings.Event(Click,cmdSaveSettings_Click)
+Gui.Form.cmdTestCon.Create(Button)
+Gui.Form.cmdTestCon.Size(1665,375)
+Gui.Form.cmdTestCon.Position(4665,720)
+Gui.Form.cmdTestCon.Anchor(9)
+Gui.Form.cmdTestCon.Caption("Test Connection")
+Gui.Form.cmdTestCon.Event(Click,cmdTestCon_Click)
+Gui.Form.cmdAddRow.Create(Button)
+Gui.Form.cmdAddRow.Size(1665,375)
+Gui.Form.cmdAddRow.Position(4650,1425)
+Gui.Form.cmdAddRow.Anchor(9)
+Gui.Form.cmdAddRow.Caption("Add Customer")
+Gui.Form.cmdAddRow.Event(Click,cmdAddRow_Click)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+f.Intrinsic.Control.CallSub(loadDisplay)
+f.Intrinsic.Control.CallSub(loadDisplayProperties)
+f.Intrinsic.Control.CallSub(loadSFTPSettings)
+f.Intrinsic.Control.CallSub(LoadIcon)
+gui.Form..Show
+
+Program.Sub.Main.End
+
+Program.Sub.Form_UnLoad.Start
+f.Intrinsic.Control.Try
+	f.Intrinsic.Control.End
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.Form_UnLoad.End
+
+Program.Sub.loadIcon.Start
+v.Local.sIcon.Declare
+'sets the icon
+f.Intrinsic.String.Build("{0}\ART\gss2.ico", v.Caller.GlobalDir, v.Local.sIcon)
+gui.Form..Icon(v.Local.sIcon)
+Program.Sub.loadIcon.End
+
+Program.Sub.ErrorMsg.Start
+v.Local.sError.Declare
+
+'Closes ODBC connection, default to connection : "con"
+f.Intrinsic.Control.If(v.ODBC!con.State, =, 1)
+	f.ODBC.Connection!con.Close
+f.Intrinsic.Control.EndIf
+
+'Generic Error message.
+f.Intrinsic.String.Build("Project ProjectName.g2u {0}{0}Subroutine: {1}{0}Error: {2} with Description: {3}", v.Ambient.NewLine, v.Args.CurrentSub, v.Ambient.ErrorNumber, v.Ambient.ErrorDescription, v.Local.sError)
+f.Intrinsic.UI.Msgbox(v.Local.sError)
+Program.Sub.ErrorMsg.End
+
+Program.Sub.loadDisplay.Start
+f.Intrinsic.Control.Try
+	f.ODBC.Connection!con.OpenCompanyConnection			
+		f.Data.DataTable.CreateFromSQL("displayXrefDT", "con", "Select * from GCG_5536_Cust_XRef Order By GSS_Customer", true)
+'		f.Data.DataTable.CreateFromSQL("displayXrefDT", "con", "Select '' as County, Customer, Name_Customer from V_CUSTOMER_MASTER", true )
+'		f.Data.Dictionary.CreateFromSQL("customerDictionary", "con", " Select Customer, County from Customer_Master where Rec = '6'")
+	f.ODBC.Connection!con.Close
+	
+'	f.Data.Dictionary.SetDefaultReturn("customerDictionary", "")
+'	f.Data.DataTable.FillFromDictionary("displayXrefDT", "customerDictionary", "Customer", "County")
+'	f.Data.Dictionary.Close("customerDictionary")
+	
+	gui.Form.GsGcCrossRef.AddGridviewFromDatatable("displayXrefGV", "displayXrefDT")
+	gui.Form.GsGcCrossRef.MainView("displayXrefGV")
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.loadDisplay.End
+
+Program.Sub.loadDisplayProperties.Start
+f.Intrinsic.Control.Try
+	gui.Form.GsGcCrossRef.SetColumnProperty("displayXrefGV", "AS400_Customer", "Caption", "AS400 Customer")
+	gui.Form.GsGcCrossRef.SetColumnProperty("displayXrefGV", "GSS_Customer", "Caption", "GSS Customer")
+	gui.Form.GsGcCrossRef.SetColumnProperty("displayXrefGV", "GSS_Customer_Name", "Caption", "GSS Customer Name")
+	
+	gui.Form.GsGcCrossRef.SetColumnProperty("displayXrefGV", "AS400_Customer", "HeaderForeColor", "White")
+	gui.Form.GsGcCrossRef.SetColumnProperty("displayXrefGV", "GSS_Customer", "HeaderForeColor", "White")
+	gui.Form.GsGcCrossRef.SetColumnProperty("displayXrefGV", "GSS_Customer_Name", "HeaderForeColor", "White")
+	
+	gui.Form.GsGcCrossRef.SetColumnProperty("displayXrefGV", "AS400_Customer", "HeaderBackColor", v.Color.GSS)
+	gui.Form.GsGcCrossRef.SetColumnProperty("displayXrefGV", "GSS_Customer", "HeaderBackColor", v.Color.GSS)
+	gui.Form.GsGcCrossRef.SetColumnProperty("displayXrefGV", "GSS_Customer_Name", "HeaderBackColor", v.Color.GSS)
+	
+	gui.Form.GsGcCrossRef.SetColumnProperty("displayXrefGV", "AS400_Customer", "HeaderFontBold", True)
+	gui.Form.GsGcCrossRef.SetColumnProperty("displayXrefGV", "GSS_Customer", "HeaderFontBold", True)
+	gui.Form.GsGcCrossRef.SetColumnProperty("displayXrefGV", "GSS_Customer_Name", "HeaderFontBold", True)
+	
+	gui.Form.GsGcCrossRef.SetColumnProperty("displayXrefGV", "AS400_Customer", "HeaderHAlignment", "Near")
+	gui.Form.GsGcCrossRef.SetColumnProperty("displayXrefGV", "GSS_Customer", "HeaderHAlignment", "Near")
+	gui.Form.GsGcCrossRef.SetColumnProperty("displayXrefGV", "GSS_Customer_Name", "HeaderHAlignment", "Near")
+	
+	gui.Form.GsGcCrossRef.SetColumnProperty("displayXrefGV", "AS400_Customer", "CellHAlignment", "Near")
+	gui.Form.GsGcCrossRef.SetColumnProperty("displayXrefGV", "GSS_Customer", "CellHAlignment", "Center")
+	gui.Form.GsGcCrossRef.SetColumnProperty("displayXrefGV", "GSS_Customer_Name", "CellHAlignment", "Near")
+	
+	gui.Form.GsGcCrossRef.SetColumnProperty("displayXrefGV", "AS400_Customer", "ReadOnly", False)
+	gui.Form.GsGcCrossRef.SetColumnProperty("displayXrefGV", "GSS_Customer", "ReadOnly", True)
+	gui.Form.GsGcCrossRef.SetColumnProperty("displayXrefGV", "GSS_Customer_Name", "ReadOnly", True)
+	
+	gui.Form.GsGcCrossRef.SetColumnProperty("displayXrefGV", "AS400_Customer", "AllowEdit", True)
+	gui.Form.GsGcCrossRef.SetColumnProperty("displayXrefGV", "GSS_Customer", "AllowEdit", False)
+	gui.Form.GsGcCrossRef.SetColumnProperty("displayXrefGV", "GSS_Customer_Name", "AllowEdit", False)
+	
+	gui.Form.GsGcCrossRef.SetColumnProperty("displayXrefGV", "AS400_Customer", "MaxLength", 7)
+	
+	gui.Form.GsGcCrossRef.BestFitColumns("displayXrefGV")
+	
+	gui.Form.GsGcCrossRef.SetGridviewProperty("displayXrefGV", "Enableappearanceoddrow", True)
+	gui.Form.GsGcCrossRef.SetGridviewProperty("displayXrefGV", "OptionsSelectionEnableAppearanceFocusedRow", False)
+	gui.Form.GsGcCrossRef.SetGridviewProperty("displayXrefGV", "EnterKeyNavigation", "Vertical")
+	gui.Form.GsGcCrossRef.SetGridviewProperty("displayXrefGV", "AllowDeleteRows", True)	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.loadDisplayProperties.End
+
+Program.Sub.cmdFileLocBrw_Click.Start
+v.Local.sRet.Declare
+f.Intrinsic.Control.Try
+	f.Intrinsic.UI.ShowOpenFileDialog("", "XLXS|*.xlxs|CSV|*.csv", v.Local.sRet)
+	
+	f.Intrinsic.Control.If(v.Local.sRet, =, "***CANCEL***")
+		f.Intrinsic.Control.ExitSub
+	f.Intrinsic.Control.EndIf
+	
+	gui.Form.txtFileLoc.Text(v.Local.sRet)	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdFileLocBrw_Click.End
+
+'Program.Sub.cmdImport_Click.Start
+'v.Local.sRet.Declare
+'v.Local.sFileLoc.Declare
+'v.Local.bFileExists.Declare
+'v.Local.bExcel.Declare
+'v.Local.iCnt.Declare
+'v.Local.sSQL.Declare
+'v.Local.sCustomer.Declare
+'v.Local.sXrefCustomer.Declare
+
+''    C:\Users\aanazco\Desktop\Projects\Customers.csv
+'f.Intrinsic.Control.Try
+'	v.Local.sFileLoc.Set(v.Screen.Form!txtFileLoc.Text)
+'	f.Intrinsic.File.Exists(v.Local.sFileLoc, v.Local.bFileExists)
+'	
+'	f.Intrinsic.Control.If(v.Local.bFileExists, =, False)
+'		f.Intrinsic.Control.ExitSub
+'	f.Intrinsic.Control.EndIf
+'	
+'	f.Automation.MSExcel.CheckPresence(v.Local.bExcel)
+'	
+'	f.Intrinsic.Control.If(v.DataTable.importDT.Exists)
+'		f.Data.DataTable.Close("importDT")
+'	f.Intrinsic.Control.EndIf
+'	
+'	f.Intrinsic.Control.If(v.Local.bExcel)
+'		f.Automation.MSExcel.ReadSpreadsheet(v.Local.sFileLoc, 2, , v.Local.sRet)
+'		f.Data.DataTable.CreateFromString("importDT", v.Local.sRet, "County*!*Customer", "String*!*String", "*!*", "$!$")
+'	f.Intrinsic.Control.Else
+'		f.Data.DataTable.CreateFromCSV("importDT", v.Local.sFileLoc, "County*!*Customer", "String*!*String", true)
+'	f.Intrinsic.Control.EndIf
+
+'	f.Data.DataTable.AddColumn("importDT","Name_Customer", "String")
+'	f.Data.DataTable.SetValueFormat("importDT", -1, "Customer", "Customer", "!@@@@@@")
+'	
+'	f.ODBC.Connection!con.OpenCompanyConnection
+'		f.Data.Dictionary.CreateFromSQL("custName", "con", "Select Customer, Name_Customer from V_CUSTOMER_MASTER")
+'	f.ODBC.Connection!con.Close
+'	
+'	f.Data.Dictionary.SetDefaultReturn("custName", "***BLANK***")
+'	f.Data.DataTable.FillFromDictionary("importDT", "custName", "Customer", "Name_Customer")
+'	f.Data.Dictionary.Close("custName")
+'	
+'	f.Data.DataView.Create("importDT", "importDV", 22, "Name_Customer <> '***BLANK***' ", "")
+'	f.Data.DataView.ToDataTable("importDT", "importDV", "writeDT")
+'	f.Data.DataTable.AddColumn("writeDT", "Rec", "Long", 6)
+'	f.Data.DataTable.RemoveColumn("writeDT", "Name_Customer")
+'	f.Data.DataTable.AcceptChanges("writeDT")
+'	
+'	f.Intrinsic.Control.If(v.DataTable.writeDT.RowCount, >, 0)
+'	
+'		f.ODBC.Connection!con.OpenCompanyConnection
+'			f.Intrinsic.Control.For(v.Local.iCnt, 0, v.DataTable.writeDT.RowCount--, 1)
+'				v.Local.sCustomer.Set(v.DataTable.writeDT(v.Local.iCnt).Customer!FieldValTrim)
+'				v.Local.sXrefCustomer.Set(v.DataTable.writeDT(v.Local.iCnt).County!FieldValTrim)
+'				f.Intrinsic.String.Build("Update customer_master Set County = '{0}' Where Rec = '6' and Customer = '{1}'", v.Local.sXrefCustomer.PSQLFriendly, v.Local.sCustomer, v.Local.sSQL)
+'				f.ODBC.Connection!con.Execute(v.Local.sSQL)
+'			f.Intrinsic.Control.Next(v.Local.iCnt)
+'		f.ODBC.Connection!con.Close
+'	
+'		f.ODBC.Connection!con.OpenCompanyConnection			
+'			'f.Data.DataTable.SaveToDB("writeDT", "con", "customer_master", "Customer*!*Rec*!*County", 2)
+'			f.Data.DataTable.CreateFromSQL("tmpDisplayXrefDT", "con", "Select County, Customer, Name_Customer from V_CUSTOMER_MASTER", true )
+'			f.Data.Dictionary.CreateFromSQL("customerDictionary", "con", " Select Customer, County from Customer_Master where Rec = '6'")
+'		f.ODBC.Connection!con.Close
+'		
+'		f.Data.Dictionary.SetDefaultReturn("customerDictionary", "")
+'		f.Data.DataTable.FillFromDictionary("tmpDisplayXrefDT", "customerDictionary", "Customer", "County")
+'		f.Data.Dictionary.Close("customerDictionary")
+'	
+'		f.Data.DataTable.DeleteRow("displayXrefDT")
+'		f.Data.DataTable.AcceptChanges("displayXrefDT")
+'		f.Data.DataTable.Merge("tmpDisplayXrefDT", "displayXrefDT", false, 2)
+'		f.Data.DataTable.AcceptChanges("displayXrefDT")
+'		f.Data.DataTable.Close("tmpDisplayXrefDT")
+'		f.Data.DataTable.Close("writeDT")
+'		f.Data.DataTable.Close("importDT")
+'	f.Intrinsic.Control.EndIf
+'	
+'	f.Intrinsic.UI.Msgbox("Upload Complete")
+'f.Intrinsic.Control.Catch
+'	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+'f.Intrinsic.Control.EndTry
+'Program.Sub.cmdImport_Click.End
+
+'Program.Sub.cmdSaveChanges_Click.Start
+'v.Local.sSQL.Declare
+'v.Local.iCnt.Declare
+'v.Local.sCustomer.Declare
+'v.Local.sXrefCustomer.Declare
+'f.Intrinsic.Control.Try	
+'	f.Data.DataTable.AcceptChanges("displayXrefDT")
+'	f.Data.DataView.Create("displayXrefDT", "displayXrefDV", 22)
+'	f.Data.DataView.ToDataTable("displayXrefDT", "displayXrefDV", "saveDT")
+'	f.Data.DataView.Close("displayXrefDT", "displayXrefDV")
+'	
+'	f.Data.DataTable.RemoveColumn("saveDT", "Name_Customer")
+'	f.Data.DataTable.AddColumn("saveDT", "Rec", "Long", 6)
+'	
+'	f.Data.DataTable.SetValueFormat("saveDT", -1, "Customer", "Customer", "!@@@@@@")
+'	f.Data.DataTable.SetValueFormat("saveDT", -1, "County", "County", "!@@@@@@@@@@@@")
+'	
+'	f.ODBC.Connection!con.OpenCompanyConnection
+'		f.Intrinsic.Control.For(v.Local.iCnt, 0, v.DataTable.saveDT.RowCount--, 1)
+'			v.Local.sCustomer.Set(v.DataTable.saveDT(v.Local.iCnt).Customer!FieldValTrim)
+'			v.Local.sXrefCustomer.Set(v.DataTable.saveDT(v.Local.iCnt).County!FieldValTrim)
+'			f.Intrinsic.String.Build("Update customer_master Set County = '{0}' Where Rec = '6' and Customer = '{1}'", v.Local.sXrefCustomer.PSQLFriendly, v.Local.sCustomer, v.Local.sSQL)
+'			f.ODBC.Connection!con.Execute(v.Local.sSQL)
+'		f.Intrinsic.Control.Next(v.Local.iCnt)
+'	f.ODBC.Connection!con.Close
+'	
+'	f.Data.DataTable.Close("saveDT")
+'	
+'	f.Intrinsic.UI.Msgbox("Save Complete")
+'f.Intrinsic.Control.Catch
+'	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+'f.Intrinsic.Control.EndTry
+'Program.Sub.cmdSaveChanges_Click.End
+
+Program.Sub.cmdImport_Click.Start
+v.Local.sRet.Declare
+v.Local.sFileLoc.Declare
+v.Local.bFileExists.Declare
+v.Local.bExcel.Declare
+v.Local.iCnt.Declare
+v.Local.sSQL.Declare
+v.Local.sCustomer.Declare
+v.Local.sXrefCustomer.Declare
+
+'    C:\Users\aanazco\Desktop\Projects\Customers.csv
+f.Intrinsic.Control.Try
+	v.Local.sFileLoc.Set(v.Screen.Form!txtFileLoc.Text)
+	f.Intrinsic.File.Exists(v.Local.sFileLoc, v.Local.bFileExists)
+	
+	f.Intrinsic.Control.If(v.Local.bFileExists, =, False)
+		f.Intrinsic.Control.ExitSub
+	f.Intrinsic.Control.EndIf
+	
+	f.Automation.MSExcel.CheckPresence(v.Local.bExcel)
+	
+	f.Intrinsic.Control.If(v.DataTable.importDT.Exists)
+		f.Data.DataTable.Close("importDT")
+	f.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.Control.If(v.Local.bExcel)
+		f.Automation.MSExcel.ReadSpreadsheet(v.Local.sFileLoc, 2, , v.Local.sRet)
+		f.Data.DataTable.CreateFromString("importDT", v.Local.sRet, "AS400_Customer*!*GSS_Customer", "String*!*String", "*!*", "$!$")
+	f.Intrinsic.Control.Else
+		f.Data.DataTable.CreateFromCSV("importDT", v.Local.sFileLoc, "AS400_Customer*!*GSS_Customer", "String*!*String", true)
+	f.Intrinsic.Control.EndIf
+
+	f.Data.DataTable.AddColumn("importDT","GSS_Customer_Name", "String")
+	
+	f.Data.DataTable.SetValueFormat("importDT", -1, "GSS_Customer", "GSS_Customer", "!@@@@@@")
+	f.Data.DataTable.SetValueFormat("importDT", -1, "AS400_Customer", "AS400_Customer", "!@@@@@@@")
+	f.Data.DataTable.SetValueFormat("importDT", -1, "AS400_Customer", "GSS_Customer_Name", "!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+
+	f.ODBC.Connection!con.OpenCompanyConnection
+		f.Data.Dictionary.CreateFromSQL("custName", "con", "Select Customer, Name_Customer from V_CUSTOMER_MASTER")
+	f.ODBC.Connection!con.Close
+	
+	f.Data.Dictionary.SetDefaultReturn("custName", "***BLANK***")
+	f.Data.DataTable.FillFromDictionary("importDT", "custName", "GSS_Customer", "GSS_Customer_Name")
+	f.Data.Dictionary.Close("custName")
+	
+	f.Data.DataView.Create("importDT", "importDV", 22, "GSS_Customer_Name <> '***BLANK***' ", "")
+	f.Data.DataView.ToDataTable("importDT", "importDV", "writeDT")
+	f.Data.DataTable.AcceptChanges("writeDT")
+	
+	f.Data.DataTable.Merge("writeDT", "displayXrefDT", false, 2)
+	
+	f.Intrinsic.Control.If(v.DataTable.writeDT.RowCount, >, 0)
+	
+		f.ODBC.Connection!con.OpenCompanyConnection
+			f.ODBC.Connection!con.Execute("Delete from GCG_5536_Cust_XRef")
+			f.Data.DataTable.SaveToDB("writeDT", "con", "GCG_5536_Cust_XRef", "AS400_Customer", 256)	
+			f.Data.DataTable.CreateFromSQL("tmpDisplayXrefDT", "con", "Select * from GCG_5536_Cust_XRef", true)
+		f.ODBC.Connection!con.Close
+	
+		f.Data.DataTable.DeleteRow("displayXrefDT")
+		f.Data.DataTable.AcceptChanges("displayXrefDT")
+		f.Data.DataTable.Merge("tmpDisplayXrefDT", "displayXrefDT", false, 2)
+		f.Data.DataTable.AcceptChanges("displayXrefDT")
+		f.Data.DataTable.Close("tmpDisplayXrefDT")
+		f.Data.DataTable.Close("writeDT")
+		f.Data.DataTable.Close("importDT")
+	f.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.UI.Msgbox("Upload Complete")
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdImport_Click.End
+
+Program.Sub.cmdSaveChanges_Click.Start
+v.Local.sSQL.Declare
+v.Local.iCnt.Declare
+v.Local.sCustomer.Declare
+v.Local.sXrefCustomer.Declare
+f.Intrinsic.Control.Try	
+
+	f.Data.DataTable.AcceptChanges("displayXrefDT")
+	f.Data.DataView.Create("displayXrefDT", "displayXrefDV", 22)
+	f.Data.DataView.ToDataTable("displayXrefDT", "displayXrefDV", "saveDT")
+	f.Data.DataView.Close("displayXrefDT", "displayXrefDV")
+	
+	f.Data.DataTable.SetValueFormat("saveDT", -1, "GSS_Customer", "GSS_Customer", "!@@@@@@")
+	f.Data.DataTable.SetValueFormat("saveDT", -1, "AS400_Customer", "AS400_Customer", "!@@@@@@@")
+	f.Data.DataTable.SetValueFormat("saveDT", -1, "GSS_Customer_Name", "GSS_Customer_Name", "!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+	
+	f.ODBC.Connection!con.OpenCompanyConnection
+		f.ODBC.Connection!con.Execute("Delete from GCG_5536_Cust_XRef")
+		f.Data.DataTable.SaveToDB("saveDT", "con", "GCG_5536_Cust_XRef", "AS400_Customer*!*GSS_Customer", 1)
+	f.ODBC.Connection!con.Close
+	
+	f.Data.DataTable.Close("saveDT")
+	
+	f.Intrinsic.UI.Msgbox("Save Complete")
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdSaveChanges_Click.End
+
+Program.Sub.loadSFTPSettings.Start
+v.Local.sTemp.Declare
+f.Intrinsic.Control.Try
+	f.ODBC.Connection!con.OpenCompanyConnection
+		f.Data.DataTable.CreateFromSQL("sftpSettingsDT", "con", "Select * from GCG_5536_Settings")
+	f.ODBC.Connection!con.Close
+	
+	f.Intrinsic.Control.If(v.DataTable.sftpSettingsDT.RowCount, =, 0)
+		f.Intrinsic.Control.ExitSub
+	f.Intrinsic.Control.ElseIf(v.DataTable.sftpSettingsDT.RowCount, >, 1)
+		f.Intrinsic.UI.Msgbox("Multiple Settings found. Please Contact Gloabl Shop for assistance.")
+		f.Intrinsic.Control.ExitSub
+	f.Intrinsic.Control.EndIf
+	
+	v.Local.sTemp.Set(v.DataTable.sftpSettingsDT(0).RemoteHost!FieldValTrim)
+	f.Intrinsic.String.WeakDecryption(v.Local.sTemp, v.Local.sTemp)
+	gui.Form.txtRemoteHost.Text(v.Local.sTemp)
+	
+	v.Local.sTemp.Set(v.DataTable.sftpSettingsDT(0).RemoteUser!FieldValTrim)
+	f.Intrinsic.String.WeakDecryption(v.Local.sTemp, v.Local.sTemp)
+	gui.Form.txtUser.Text(v.Local.sTemp)
+	
+	v.Local.sTemp.Set(v.DataTable.sftpSettingsDT(0).RemotePassword!FieldValTrim)
+	f.Intrinsic.String.WeakDecryption(v.Local.sTemp, v.Local.sTemp)
+	gui.Form.txtPassword.Text(v.Local.sTemp)
+	
+	v.Local.sTemp.Set(v.DataTable.sftpSettingsDT(0).RemotePort!FieldValTrim)
+	f.Intrinsic.String.WeakDecryption(v.Local.sTemp, v.Local.sTemp)
+	gui.Form.txtRemotePort.Text(v.Local.sTemp)
+	
+	v.Local.sTemp.Set(v.DataTable.sftpSettingsDT(0).RemotePath!FieldValTrim)
+	f.Intrinsic.String.WeakDecryption(v.Local.sTemp, v.Local.sTemp)
+	gui.Form.txtRemotePath.Text(v.Local.sTemp)
+	
+	f.Data.DataTable.Close("sftpSettingsDT")
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.loadSFTPSettings.End
+
+Program.Sub.cmdSaveSettings_Click.Start
+v.Local.sTemp.Declare
+v.Local.sRemoteHost.Declare
+v.Local.sRemoteUser.Declare
+v.Local.sRemotePassword.Declare
+v.Local.sRemotePort.Declare
+v.Local.sRemotePath.Declare
+v.Local.sSQL.Declare
+f.Intrinsic.Control.Try
+	
+	v.Local.sTemp.Set(v.Screen.Form!txtRemoteHost.Text)
+	f.Intrinsic.String.WeakEncryption(v.Local.sTemp.Trim, v.Local.sRemoteHost)
+	
+	v.Local.sTemp.Set(v.Screen.Form!txtUser.Text)
+	f.Intrinsic.String.WeakEncryption(v.Local.sTemp.Trim, v.Local.sRemoteUser)
+	
+	v.Local.sTemp.Set(v.Screen.Form!txtPassword.Text)
+	f.Intrinsic.String.WeakEncryption(v.Local.sTemp.Trim, v.Local.sRemotePassword)
+	
+	v.Local.sTemp.Set(v.Screen.Form!txtRemotePort.Text)
+	f.Intrinsic.String.WeakEncryption(v.Local.sTemp.Trim, v.Local.sRemotePort)
+	
+	v.Local.sTemp.Set(v.Screen.Form!txtRemotePath.Text)
+	f.Intrinsic.String.WeakEncryption(v.Local.sTemp.Trim, v.Local.sRemotePath)
+	
+	f.ODBC.Connection!con.OpenCompanyConnection
+		f.Data.DataTable.CreateFromSQL("sftpSettingsDT", "con", "Select * from GCG_5536_Settings")
+		
+		f.Intrinsic.Control.If(v.DataTable.sftpSettingsDT.RowCount, =, 0)
+			f.Intrinsic.String.Build("Insert into  GCG_5536_Settings (RemoteHost, RemoteUser, RemotePassword, RemotePort, RemotePath) Values ('{0}', '{1}', '{2}', '{3}', '{4}')", v.Local.sRemoteHost, v.Local.sRemoteUser, v.Local.sRemotePassword, v.Local.sRemotePort, v.Local.sRemotePath, v.Local.sSQL)
+			f.ODBC.Connection!con.Execute(v.Local.sSQL)
+		f.Intrinsic.Control.ElseIf(v.DataTable.sftpSettingsDT.RowCount, >, 0)
+			f.ODBC.Connection!con.Execute("Delete from GCG_5536_Settings")
+			f.Intrinsic.String.Build("Insert into  GCG_5536_Settings (RemoteHost, RemoteUser, RemotePassword, RemotePort, RemotePath) Values ('{0}', '{1}', '{2}', '{3}', '{4}')", v.Local.sRemoteHost, v.Local.sRemoteUser, v.Local.sRemotePassword, v.Local.sRemotePort, v.Local.sRemotePath, v.Local.sSQL)
+			f.ODBC.Connection!con.Execute(v.Local.sSQL)
+		f.Intrinsic.Control.EndIf
+		
+	f.ODBC.Connection!con.Close
+	
+	f.Intrinsic.UI.Msgbox("Save Complete")
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdSaveSettings_Click.End
+
+Program.Sub.cmdTestCon_Click.Start
+v.Local.sRemoteHost.Declare
+v.Local.sRemoteUser.Declare
+v.Local.sRemotePassword.Declare
+v.Local.sRemotePort.Declare
+v.Local.sRemotePath.Declare
+v.Local.sSQL.Declare
+f.Intrinsic.Control.Try
+	
+	v.Local.sRemoteHost.Set(v.Screen.Form!txtRemoteHost.Text)
+
+	v.Local.sRemoteUser.Set(v.Screen.Form!txtUser.Text)
+	
+	v.Local.sRemotePassword.Set(v.Screen.Form!txtPassword.Text)
+
+	v.Local.sRemotePort.Set(v.Screen.Form!txtRemotePort.Text)
+
+	v.Local.sRemotePath.Set(v.Screen.Form!txtRemotePath.Text)
+	
+	f.Intrinsic.Control.AddEventHandler("SFTPDirList","Listdir")
+	
+	'logon credentials.
+	f.Communication.SFTP.SetProperty("SSHAcceptServerAuthentication","true")
+	f.Communication.SFTP.SetProperty("remoteHost", v.Local.sRemoteHost.Trim)
+	f.Communication.SFTP.SetProperty("User", v.Local.sRemoteUser.Trim)
+	f.Communication.SFTP.SetProperty("Password", v.Local.sRemotePassword.Trim)
+	f.Communication.SFTP.SetProperty("remotePort", v.Local.sRemotePort)
+	f.Communication.SFTP.Logon
+	f.Communication.SFTP.SetProperty("RemotePath", v.Local.sRemotePath)
+
+	
+	F.Communication.SFTP.ListDirectory
+	f.Intrinsic.UI.Msgbox("Successful")
+	
+	f.Communication.SFTP.Logoff	
+f.Intrinsic.Control.Catch
+	f.Communication.SFTP.Logoff	
+	f.Intrinsic.UI.Msgbox("Connection Failed")
+	f.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdTestCon_Click.End
+
+Program.Sub.Listdir.Start
+f.Intrinsic.Control.Try
+	'Do nothing
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.Listdir.End
+
+Program.Sub.cmdAddRow_Click.Start
+v.Local.sRet.Declare
+v.Local.sTemp.Declare
+f.Intrinsic.Control.Try
+	f.ODBC.Connection!con.OpenCompanyConnection
+		f.Intrinsic.UI.Browser("Customer", "con", "Select Customer, Name_Customer from V_CUSTOMER_MASTER", "Customer*!*Name_Customer", "60*!*120", v.Local.sRet)
+	f.ODBC.Connection!con.Close
+	
+	f.Intrinsic.Control.If(v.Local.sRet, <>, "***CANCEL***")
+		f.Intrinsic.String.Split(v.Local.sRet, "*!*", v.Local.sRet)
+		f.Intrinsic.Control.If(v.Local.sRet.UBound, =, 1)
+			f.Data.DataTable.AddRow("displayXrefDT", "GSS_Customer", v.Local.sRet(0), "GSS_Customer_Name", v.Local.sRet(1))
+		f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdAddRow_Click.End
+
+
